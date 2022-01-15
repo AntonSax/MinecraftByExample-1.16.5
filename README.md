@@ -10,6 +10,7 @@ A list of changes from @TheGreyGhost's work.
 
 
 # File Structure
+```
 - src
   - main
     - java
@@ -27,3 +28,4 @@ A list of changes from @TheGreyGhost's work.
           - flame_particle.json
         - textures
           - flame.png
+```
