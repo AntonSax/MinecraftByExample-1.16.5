@@ -35,6 +35,9 @@ Anything that uses StartupCommon or StartupClient will likely be replaced with P
 #### FlameParticleFactory.java
 * `makeParticle()`                         becomes `createParticle()`
 
+#### FlameParticleType.java
+* No changes
+
 
 # File Structure
 ```
