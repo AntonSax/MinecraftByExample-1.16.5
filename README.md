@@ -10,6 +10,9 @@ For now this just includes a sample of Particle Registration and the other neces
 # Particles
 A list of changes from @TheGreyGhost's work.
 
+#### ParticleRegistration.java
+Anything that uses StartupCommon or StartupClient will likely be replaced with ParticleRegistration.
+
 #### FlameParticle.java
 * `particleScale`                          becomes `this.scale(float f)`
 * `maxAge`                                 becomes `this.lifetime`
@@ -22,6 +25,14 @@ A list of changes from @TheGreyGhost's work.
 * `prevPosX, prevPosY, prevPosZ`           becomes `this.xo, thix.yo, this.zo`
 * `posx, posY, posZ`                       becomes `this.x, this.y, this.z`
 * `this.setExpired()`                      becomes `this.remove()`
+
+#### FlameParticleData.java
+* `write(PacketBuffer buf)`                becomes `writeToNetwork(PacketBuffer buf)`
+* `getParameters()`                        becomes `writeToString()`
+* `deserialize()`                          becomes `fromCommand()`
+* `read()`                                 becomes `fromNetwork()`
+
+#### 
 
 
 # File Structure
