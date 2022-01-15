@@ -32,7 +32,8 @@ Anything that uses StartupCommon or StartupClient will likely be replaced with P
 * `deserialize()`                          becomes `fromCommand()`
 * `read()`                                 becomes `fromNetwork()`
 
-#### 
+#### FlameParticleFactory.java
+* `makeParticle()`                         becomes `createParticle()`
 
 
 # File Structure
