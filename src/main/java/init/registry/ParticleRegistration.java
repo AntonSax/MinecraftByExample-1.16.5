@@ -1,7 +1,7 @@
-package com.pixelmonmod.pixelmon.init.registry;
+package com.your_mod_name.your_mod.init.registry;
 
-import com.pixelmonmod.pixelmon.Pixelmon;
-import com.pixelmonmod.pixelmon.client.particle.particles.*;
+import com.your_mod_name.your_mod.Your_Mod;
+import com.your_mod_name.your_mod.client.particle.particles.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.particles.ParticleType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -15,34 +15,25 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.awt.*;
 
-@Mod.EventBusSubscriber(modid = Pixelmon.MODID, bus = Bus.MOD, value = Dist.CLIENT)
+/**
+ * Author: Tony Sax
+ */
+
+@Mod.EventBusSubscriber(modid = Your_Mod.MODID, bus = Bus.MOD, value = Dist.CLIENT)
 public class ParticleRegistration {
 
 	public static final DeferredRegister<ParticleType<?>> PARTICLES_TYPES = DeferredRegister.create(
-			ForgeRegistries.PARTICLE_TYPES, Pixelmon.MODID);
+			ForgeRegistries.PARTICLE_TYPES, Your_Mod.MODID);
 
-	//public static final RegistryObject<ParticleType<ColoredParticleData>> COLORED_PARTICLE = PARTICLES_TYPES.register(
-	//		"colored_particle",
-	//		() -> new ParticleType<ColoredParticleData>(false, ColoredParticleData.DESERIALIZER));
 	public static final RegistryObject<ParticleType<FlameParticleData>> FLAME_PARTICLE = PARTICLES_TYPES.register(
 			"flame_particle",
 			FlameParticleType::new);
 
-	public static ParticleType<FlameParticleData> flameParticleType;
+	public static ParticleType<FlameParticleData> flameParticleType; // this may not be needed
 
 	@SuppressWarnings("resource")
 	@SubscribeEvent
 	public static void registerParticleFactory(ParticleFactoryRegisterEvent event) {
-		// from 1.15 video
-		//Minecraft.getInstance().particles.registerFactory(ParticleRegistry.COLORED_PARTICLE.get(),
-		//		ColoredParticle.Factory::new);
-		// from 1.16 auto completion
-		//Minecraft.getInstance().particleEngine.register(ParticleRegistry.COLORED_PARTICLE.get(),
-		//		ColoredParticle.Factory::new);
-		//Minecraft.getInstance().particleEngine.register(ParticleRegistry.COLORED_PARTICLE.get(),
-		//		new ColoredParticle.Factory(Color.RED)); // needs IAnimatedSprite parameter
-
-		// from TheGreyGhost's MinecraftByExample
 		Minecraft.getInstance().particleEngine.register(ParticleRegistration.FLAME_PARTICLE.get(), FlameParticleFactory::new);
 	}
 }

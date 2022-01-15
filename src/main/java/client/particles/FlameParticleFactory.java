@@ -1,9 +1,9 @@
-package com.pixelmonmod.pixelmon.client.particle.particles;
+package com.your_mod_name.your_mod.client.particle.particles;
 
 // example from github user TheGreyGhost
 //package minecraftbyexample.mbe50_particle;
 
-import com.pixelmonmod.pixelmon.client.particle.particles.FlameParticle;
+import com.your_mod_name.your_mod.client.particle.particles.FlameParticle;
 
 import net.minecraft.client.particle.IParticleFactory;
 import net.minecraft.client.particle.IAnimatedSprite;
@@ -13,12 +13,11 @@ import net.minecraft.client.world.ClientWorld;
 import javax.annotation.Nullable;
 
 /**
- * Created by TGG on 25/03/2020.
- *
+ * Author: Tony Sax and TheGreyGhost
+ * Based on work by TGG that was created on 25/03/2020.
  * On the client side:
  * When the client wants to spawn a Particle, it gives the FlameParticleData to this factory method
  * The factory selects an appropriate Particle class and instantiates it
- *
  */
 public class FlameParticleFactory implements IParticleFactory<FlameParticleData> {  //IParticleFactory
 

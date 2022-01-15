@@ -1,10 +1,11 @@
-package com.pixelmonmod.pixelmon.client.particle.particles;
+package com.your_mod_name.your_mod.client.particle.particles;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.particles.ParticleType;
 
 /**
- * Created by TGG on 25/03/2020.
+ * Author: Tony Sax and TheGreyGhost
+ * Based on work created by TGG on 25/03/2020.
  * Simple class used to describe the Particle
  */
 public class FlameParticleType extends ParticleType<FlameParticleData> {

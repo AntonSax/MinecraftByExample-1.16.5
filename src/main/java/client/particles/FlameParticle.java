@@ -1,4 +1,4 @@
-package com.pixelmonmod.pixelmon.client.particle.particles;
+package com.your_mod_name.your_mod.client.particle.particles;
 
 import net.minecraft.client.particle.*;
 import net.minecraft.client.renderer.*;
@@ -7,7 +7,7 @@ import net.minecraft.client.world.ClientWorld;
 import java.awt.*;
 
 /**
- * User: The Grey Ghost
+ * Author: Tony Sax and TheGreyGhost
  * Date: 24/12/2014
  * Custom Particle to illustrate how to add a Particle with your own texture and movement/animation behaviour
  *
@@ -33,11 +33,11 @@ public class FlameParticle extends SpriteTexturedParticle
 		setSize((float)diameter, (float)diameter);    // the size (width, height) of the collision box.
 
 		final float PARTICLE_SCALE_FOR_ONE_METRE = 0.5F; //  if the particleScale is 0.5, the texture will be rendered as 1 metre high
-		//
-		//particleScale = PARTICLE_SCALE_FOR_ONE_METRE * (float)diameter; // sets the rendering size of the particle for a TexturedParticle.
+
+		// sets the rendering size of the particle for a TexturedParticle.
 		this.scale(PARTICLE_SCALE_FOR_ONE_METRE * (float)diameter);
 
-		//maxAge = 100;  // lifetime in ticks: 100 ticks = 5 seconds
+		// lifetime in ticks: 100 ticks = 5 seconds
 		this.lifetime = 100;
 
 		final float ALPHA_VALUE = 1.0F;
@@ -48,8 +48,7 @@ public class FlameParticle extends SpriteTexturedParticle
 		this.yd = velocityY;
 		this.zd = velocityZ;
 
-		// I think I replace canCollide with hasPhysics?
-		//this.canCollide = true;  // the move() method will check for collisions with scenery
+		// the move() method will check for collisions with scenery
 		this.hasPhysics = true;
 	}
 
@@ -103,7 +102,7 @@ public class FlameParticle extends SpriteTexturedParticle
 
 		// collision with a block makes the ball disappear.  But does not collide with entities
 		if (onGround) {  // onGround is only true if the particle collides while it is moving downwards...
-			this.remove(); // this.setExpired() is probably this.remove()
+			this.remove();
 		}
 
 		if (yo == y && yd > 0) {  // detect a collision while moving upwards (can't move up at all)

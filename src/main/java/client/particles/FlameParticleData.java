@@ -1,4 +1,4 @@
-package com.pixelmonmod.pixelmon.client.particle.particles;
+package com.your_mod_name.your_mod.client.particle.particles;
 // Example from github user TheGreyGhost
 //package minecraftbyexample.mbe50_particle;
 
@@ -6,7 +6,7 @@ import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.pixelmonmod.pixelmon.init.registry.ParticleRegistration;
+import com.your_mod_name.your_mod.init.registry.ParticleRegistration;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.particles.IParticleData;
 import net.minecraft.particles.ParticleType;
@@ -17,7 +17,8 @@ import java.awt.*;
 import java.util.Locale;
 
 /**
- * Created by TGG on 25/03/2020.
+ * Author: Tony Sax and TheGreyGhost
+ * Based on work created by TGG on 25/03/2020.
  *
  * The particle has two pieces of information which are used to customise it:
  *
